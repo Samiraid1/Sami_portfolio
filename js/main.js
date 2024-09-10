@@ -270,8 +270,66 @@
   });
 
 
-
+	
 
 
 })(jQuery);
 
+// script.js
+/*
+// Function to open a specific popup
+function openPopup(popupId) {
+    const popup = document.getElementById(popupId);
+    popup.style.display = "block";
+}
+
+// Function to close a specific popup
+function closePopup(popupId) {
+    const popup = document.getElementById(popupId);
+    popup.style.display = "none";
+}
+
+// Event listeners for buttons
+document.getElementById('openPopup1Btn').addEventListener('click', function() {
+    openPopup('popup1Modal');
+});
+
+document.getElementById('openPopup2Btn').addEventListener('click', function() {
+    openPopup('popup2Modal');
+});
+
+document.getElementById('openPopup3Btn').addEventListener('click', function() {
+    openPopup('popup3Modal');
+});
+
+document.getElementById('openPopup4Btn').addEventListener('click', function() {
+    openPopup('popup4Modal');
+});
+
+// Event listeners for close buttons
+document.querySelectorAll('.close').forEach(function(closeBtn) {
+    closeBtn.addEventListener('click', function() {
+        const popupId = this.getAttribute('data-close');
+        closePopup(popupId);
+    });
+}); */
+
+// Function to open the modal
+function openModal(certId) {
+	const modal = document.getElementById(certId);
+	modal.style.display = 'flex';
+  
+	// Add event listener to close modal when clicking outside modal content
+	modal.addEventListener('click', function(event) {
+	  if (event.target === modal) {
+		closeModal(certId);
+	  }
+	});
+  }
+  
+  // Function to close the modal
+  function closeModal(certId) {
+	const modal = document.getElementById(certId);
+	modal.style.display = 'none';
+  }
+  
